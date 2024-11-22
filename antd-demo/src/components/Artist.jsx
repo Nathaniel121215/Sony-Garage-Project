@@ -10,23 +10,23 @@ import {
     Avatar,
     Pagination,
 } from "antd";
-import Loader_BlackSM from "./components/Loader_BlackSM";
+import Loader_BlackSM from "../components/Loader_BlackSM";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined"; // Dropdown Icon
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight"; // Arrow inside a circle
 import HeadsetIcon from "@mui/icons-material/Headset"; // Example Icon
-import Header_BG from "./assets/HeaderBG.png";
+import Header_BG from "../assets/HeaderBG.png";
 
-import Arrow_Icon from "./assets/Arrow_Icon.svg";
-import Concert_Icon from "./assets/Concert_Icon.svg";
-import Artist_Icon from "./assets/Artist_Icon.svg";
-import Exports_Icon from "./assets/Exports_Icon.svg";
-import Fetch_Icon from "./assets/Fetch_Icon.svg";
+import Arrow_Icon from "../assets/Arrow_Icon.svg";
+import Concert_Icon from "../assets/Concert_Icon.svg";
+import Artist_Icon from "../assets/Artist_Icon.svg";
+import Exports_Icon from "../assets/Exports_Icon.svg";
+import Fetch_Icon from "../assets/Fetch_Icon.svg";
 
-import Search_Icon from "./assets/Search_Icon.svg";
-import Filter_Icon from "./assets/Filter_Icon.svg";
-import Export_Icon from "./assets/Export_Icon.svg";
-import Sort_Icon from "./assets/Sort_Icon.svg";
-import Edit_Icon from "./assets/Edit_Icon.svg";
+import Search_Icon from "../assets/Search_Icon.svg";
+import Filter_Icon from "../assets/Filter_Icon.svg";
+import Export_Icon from "../assets/Export_Icon.svg";
+import Sort_Icon from "../assets/Sort_Icon.svg";
+import Edit_Icon from "../assets/Edit_Icon.svg";
 
 const { Header, Content, Footer, Sider } = Layout;
 

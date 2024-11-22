@@ -10,97 +10,161 @@ import {
     Avatar,
     Pagination,
 } from "antd";
-import Loader_BlackSM from "./components/Loader_BlackSM";
+import Loader_BlackSM from "../components/Loader_BlackSM";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined"; // Dropdown Icon
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight"; // Arrow inside a circle
 import HeadsetIcon from "@mui/icons-material/Headset"; // Example Icon
-import Header_BG from "./assets/HeaderBG.png";
+import Header_BG from "../assets/HeaderBG.png";
 
-import Arrow_Icon from "./assets/Arrow_Icon.svg";
-import Concert_Icon from "./assets/Concert_Icon.svg";
-import Artist_Icon from "./assets/Artist_Icon.svg";
-import Exports_Icon from "./assets/Exports_Icon.svg";
-import Fetch_Icon from "./assets/Fetch_Icon.svg";
+import Arrow_Icon from "../assets/Arrow_Icon.svg";
+import Concert_Icon from "../assets/Concert_Icon.svg";
+import Artist_Icon from "../assets/Artist_Icon.svg";
+import Exports_Icon from "../assets/Exports_Icon.svg";
+import Fetch_Icon from "../assets/Fetch_Icon.svg";
 
-import Search_Icon from "./assets/Search_Icon.svg";
-import Filter_Icon from "./assets/Filter_Icon.svg";
-import Export_Icon from "./assets/Export_Icon.svg";
-import Sort_Icon from "./assets/Sort_Icon.svg";
-import Edit_Icon from "./assets/Edit_Icon.svg";
+import Search_Icon from "../assets/Search_Icon.svg";
+import Filter_Icon from "../assets/Filter_Icon.svg";
+import Export_Icon from "../assets/Export_Icon.svg";
+import Sort_Icon from "../assets/Sort_Icon.svg";
 
 const { Header, Content, Footer, Sider } = Layout;
 
-const Artist = () => {
+const Concert = () => {
     const [data, setData] = useState([
         {
             key: "1",
+            CompanyRecordingLabel: "Kloon Music",
             Artist: "Neguse",
-            Website: "neguse-music.com",
-            Twitter: "Neguse Music",
-            Reason: "Music world tour. Live starting....",
+            Venue: "Sapporo",
+            Date: "Nov 11 2024",
+            TimeStart: "14:00",
+            TimeEnd: "14:00",
         },
         {
             key: "2",
+            CompanyRecordingLabel: "SME Music",
             Artist: "Millet",
-            Website: "millet-band.com",
-            Twitter: "Millet Music",
-            Reason: "Band meet & greet with live solo perf...",
+            Venue: "Vietnam",
+            Date: "Dec 11 2024",
+            TimeStart: "14:00",
+            TimeEnd: "14:00",
         },
         {
             key: "3",
+            CompanyRecordingLabel: "Kloon Music",
             Artist: "Neguse",
-            Website: "neguse-music.com",
-            Twitter: "Neguse Music",
-            Reason: "Music world tour. Live starting....",
+            Venue: "Sapporo",
+            Date: "Nov 11 2024",
+            TimeStart: "14:00",
+            TimeEnd: "14:00",
         },
         {
             key: "4",
+            CompanyRecordingLabel: "SME Music",
             Artist: "Millet",
-            Website: "https://millet-band.com/",
-            Twitter: "Millet Music",
-            Reason: "Band meet & greet with live solo perf...",
+            Venue: "Vietnam",
+            Date: "Dec 11 2024",
+            TimeStart: "14:00",
+            TimeEnd: "14:00",
         },
         {
             key: "5",
+            CompanyRecordingLabel: "Anewhite",
             Artist: "Anewhite",
-            Website: "theanewhite.jp",
-            Twitter: "Anewhite Entertainment",
-            Reason: "Album signing and single rel...",
+            Venue: "Tokyo",
+            Date: "Dec 11 2024",
+            TimeStart: "14:00",
+            TimeEnd: "14:00",
         },
         {
             key: "6",
-            Artist: "Neguse",
-            Website: "neguse-music.com",
-            Twitter: "Neguse Music",
-            Reason: "Music world tour. Live starting....",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
         },
         {
             key: "7",
-            Artist: "Millet",
-            Website: "millet-band.com",
-            Twitter: "Millet Music",
-            Reason: "Band meet & greet with live solo perf...",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
         },
         {
             key: "8",
-            Artist: "Neguse",
-            Website: "neguse-music.com",
-            Twitter: "Neguse Music",
-            Reason: "Music world tour. Live starting....",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
         },
         {
             key: "9",
-            Artist: "Millet",
-            Website: "https://millet-band.com/",
-            Twitter: "Millet Music",
-            Reason: "Band meet & greet with live solo perf...",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
         },
         {
             key: "10",
-            Artist: "Anewhite",
-            Website: "theanewhite.jp",
-            Twitter: "Anewhite Entertainment",
-            Reason: "Album signing and single rel...",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
+        },
+        {
+            key: "11",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
+        },
+        {
+            key: "12",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
+        },
+        {
+            key: "13",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
+        },
+        {
+            key: "14",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
+        },
+        {
+            key: "15",
+            CompanyRecordingLabel: "Jim Red",
+            Artist: 32,
+            Venue: "London No. 2 Lake Park",
+            Date: 90,
+            TimeStart: "Inactive",
+            TimeEnd: "Sales",
         },
     ]);
 
@@ -122,14 +186,15 @@ const Artist = () => {
 
     const columns = [
         {
-            title: "Artist Name",
-            dataIndex: "Artist",
+            title: "Company / Recording Label",
+            dataIndex: "CompanyRecordingLabel",
             width: "150px",
         },
-        { title: "Official Website", dataIndex: "Website", width: "100px" },
-        { title: "X/Twitter", dataIndex: "Twitter", width: "100px" },
-        { title: "Reason", dataIndex: "Reason", width: "100px" },
-
+        { title: "Artist", dataIndex: "Artist", width: "100px" },
+        { title: "Venue", dataIndex: "Venue", width: "100px" },
+        { title: "Date", dataIndex: "Date", width: "100px" },
+        { title: "Time Start", dataIndex: "TimeStart", width: "100px" },
+        { title: "Time End", dataIndex: "TimeEnd", width: "100px" },
     ];
 
     const menu = (
@@ -238,13 +303,7 @@ const Artist = () => {
                     {/* Left Side - 3 boxes */}
                     <div className="flex items-center pt-5 gap-4 md:space-x-4 flex-col md:flex-row md:space-between">
                         {/* First Box */}
-                        <div
-                            className="p-4 rounded-[20px] w-auto shadow-md py-5 px-9"
-                            style={{
-                                backgroundColor: "#FFFFFFCC", // Semi-transparent background
-                                opacity: 0.8, // 80% opacity
-                            }}
-                        >
+                        <div className="bg-white p-4 rounded-[20px] w-auto shadow-md py-5 px-9">
                             <div className="flex items-center justify-between gap-[80px]">
                                 <div className="flex flex-col">
                                     <div className="flex flex-col items-start">
@@ -302,7 +361,13 @@ const Artist = () => {
                         </div>
 
                         {/* Second Box */}
-                        <div className="bg-white p-4 rounded-[20px] w-auto shadow-md py-5 px-9">
+                        <div
+                            className="p-4 rounded-[20px] w-auto shadow-md py-5 px-9"
+                            style={{
+                                backgroundColor: "#FFFFFFCC", // Semi-transparent background
+                                opacity: 0.8, // 80% opacity
+                            }}
+                        >
                             <div className="flex items-center justify-between gap-[80px]">
                                 <div className="flex flex-col">
                                     <div className="flex flex-col items-start">
@@ -446,8 +511,8 @@ const Artist = () => {
 
                 <Header className="bg-[#F7F7F7] px-[20px] py-[20px] md:px-[45px] flex flex-wrap items-center justify-between h-auto">
                     {/* Left Side - Title */}
-                    <div className="w-full md:w-auto text-[#262525] font-[Inter] font-bold text-[25px] leading-[26px] mb-5 lg:mb-0">
-                        Artists Dashboard 
+                    <div className="w-full md:w-auto text-[#262525] font-[Inter] font-medium text-[25px] leading-[26px] mb-5 lg:mb-0">
+                        Concerts Dashboard
                     </div>
 
                     {/* Right Side - Search Box and Buttons */}
@@ -462,21 +527,13 @@ const Artist = () => {
                             <input
                                 type="text"
                                 placeholder="Search"
-                                className="pl-12 pr-4 py-4 text-[#C4C4C4] font-[Inter] font-normal text-[13px] leading-[14.52px] border border-[#E4E4E4] rounded-[15px] w-full md:w-[280px] h-[40px]"
+                                className="pl-12 pr-4 py-2 text-[#C4C4C4] font-[Inter] font-normal text-[13px] leading-[14.52px] border border-[#E4E4E4] rounded-[15px] w-full md:w-[280px] h-[40px]"
                             />
                         </div>
 
                         {/* Buttons - Use Grid Layout for Mobile */}
-                        <div className="grid grid-cols-2 gap-2 w-full lg:flex md:space-x-4">
-                            <Button className="lg:w-[120px] bg-[#FFFFFF] text-[#1F1F1F] rounded-[20px] px-4 py-4 flex items-center justify-center space-x-1 font-['Inter'] font-medium text-[14px] leading-[16.94px]">
-                                <img
-                                    src={Edit_Icon}
-                                    alt="Edit Icon"
-                                    className="w-4 h-4"
-                                />
-                                Edit
-                            </Button>
-                            <Button className="lg:w-[120px] bg-[#FFFFFF] text-[#1F1F1F] rounded-[20px] px-4 py-4 flex items-center justify-center space-x-1 font-['Inter'] font-medium text-[14px] leading-[16.94px]">
+                        <div className="grid grid-cols-3 gap-2 w-full lg:flex md:space-x-4">
+                            <Button className="lg:w-[120px] bg-[#FFFFFF] text-[#1F1F1F] rounded-[20px] px-4 py-2 flex items-center justify-center space-x-1 font-['Inter'] font-medium text-[14px] leading-[16.94px]">
                                 <img
                                     src={Sort_Icon}
                                     alt="Sort Icon"
@@ -484,7 +541,7 @@ const Artist = () => {
                                 />
                                 Sort
                             </Button>
-                            <Button className="lg:w-[120px] bg-[#FFFFFF] text-[#1F1F1F] rounded-[20px] px-4 py-4 flex items-center justify-center space-x-1 font-['Inter'] font-medium text-[14px] leading-[16.94px]">
+                            <Button className="lg:w-[120px] bg-[#FFFFFF] text-[#1F1F1F] rounded-[20px] px-4 py-2 flex items-center justify-center space-x-1 font-['Inter'] font-medium text-[14px] leading-[16.94px]">
                                 <img
                                     src={Filter_Icon}
                                     alt="Filter Icon"
@@ -492,7 +549,7 @@ const Artist = () => {
                                 />
                                 Filter
                             </Button>
-                            <Button className="lg:w-[120px] bg-[#FFFFFF] text-[#1F1F1F] rounded-[20px] px-4 py-4 flex items-center justify-center space-x-1 font-['Inter'] font-medium text-[14px] leading-[16.94px]">
+                            <Button className="lg:w-[120px] bg-[#FFFFFF] text-[#1F1F1F] rounded-[20px] px-4 py-2 flex items-center justify-center space-x-1 font-['Inter'] font-medium text-[14px] leading-[16.94px]">
                                 <img
                                     src={Export_Icon}
                                     alt="Export Icon"
@@ -570,4 +627,4 @@ const Artist = () => {
     );
 };
 
-export default Artist;
+export default Concert;
